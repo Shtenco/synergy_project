@@ -1,891 +1,1193 @@
-# СИНЕРГИЯ — Regulatory Sandbox / Verifiable Economic Coordination OS
+# СИНЕРГИЯ
 
-> **Master-dossier проекта для регуляторной песочницы, грантов, технологических партнёров и инвесторов.**  
-> **Статус:** R&D / pre-production / sandbox proposal  
-> **Дата среза:** 6 сентября 2026  
-> **Архитектурный корень:** `Shtenco/synergy_system`  
-> **Федерация:** 45 репозиториев  
-> **Основатель и системный архитектор:** Евгений Коштенко
+## Большая цифровая система для личного капитала, бизнеса, инвестиций, науки, промышленности и государства
 
----
+> **СИНЕРГИЯ — это попытка собрать в одну проверяемую систему то, что сегодня существует отдельно:** деньги человека, бизнес, инвестиции, платежи, бухгалтерию, искусственный интеллект, науку, промышленность, государственные расходы, блокчейн, сеть передачи данных и вычислительную инфраструктуру.
+>
+> Это не один бот, не один токен, не одна нейросеть и не один блокчейн. Это **федерация независимых технологических систем**, каждая из которых отвечает только за свою часть реальности.
 
-## 1. Executive summary
-
-**СИНЕРГИЯ** — проект регуляторной песочницы для проверки федеративной цифровой экономической инфраструктуры, объединяющей личные финансы, бизнес, институциональные инвестиции, платежи, бухгалтерскую истину, государственные расходы, научные проекты, промышленность, AI-координацию, распределённую сеть и post-quantum trust.
-
-Главная инженерная идея:
-
-> **один экономический факт → один источник полномочий → типизированный контракт → проверяемое доказательство → воспроизводимый маршрут между независимыми системами.**
-
-СИНЕРГИЯ не предполагает, что AI, blockchain, token mint/rebase или внутренняя переоценка сами по себе создают экономическую ценность. Внешняя прибыль признаётся только после внешнего settlement и reconciliation; бухгалтерская истина принадлежит Financial OS; платёжный settlement — MetaPay; trading intelligence — MIDAS; reasoning — NEXUS; blockchain/metachain фиксируют и проверяют commitments, но не подменяют реальный мир и бухгалтерию.
-
-Цель песочницы — **доказать или опровергнуть** технологические, экономические и регуляторные гипотезы проекта ограниченными пилотами до масштабирования.
+**Статус:** R&D / pre-production / regulatory sandbox candidate  
+**Дата среза:** 6 сентября 2026  
+**Архитектурный корень:** [`Shtenco/synergy_system`](https://github.com/Shtenco/synergy_system)  
+**Техническая федерация:** **45 репозиториев**  
+**Master dossier:** `Shtenco/synergy_project`  
+**Всего наблюдаемых репозиториев:** **46**  
+**Основатель и системный архитектор:** Евгений Коштенко
 
 ---
 
-## 2. Что проверяется в песочнице
+# 1. Что такое СИНЕРГИЯ простыми словами
 
-### Pilot A — «Личный капитал»
+Представьте экономику как огромный организм.
 
-Не-кастодиальное приложение финансовой дисциплины:
+У человека есть доходы, расходы, долги, накопления и инвестиции. У бизнеса есть продажи, сотрудники, закупки и прибыль. У инвестиционной системы есть рынок и риск. У государства есть бюджет и закупки. У науки есть гипотезы и эксперименты. У промышленности есть заводы, оборудование и реальные товары.
 
-- `Доходы − Расходы = Дельта`;
-- бюджетные конверты и цели;
-- резерв 3–6 месяцев;
-- долговой модуль;
-- инвестиционная лестница;
-- compound-capital / financial-freedom scenarios;
-- stress testing;
-- AI-помощник с ограниченной authority.
+Сегодня эти миры соединены плохо. Информация находится в разных программах. Деньги идут по одним каналам, бухгалтерия — по другим, решения принимает кто-то третий, а доказательства того, что реально произошло, часто хранятся вообще отдельно.
 
-**KPI:** savings rate, reserve months, debt-service burden, устойчивость бюджета, качество risk understanding.
+**СИНЕРГИЯ строится как единая цифровая нервная система между этими мирами.**
 
-### Pilot B — MetaPay + Financial OS
+```text
+ЧЕЛОВЕК
+  ↓
+ЛИЧНЫЙ КАПИТАЛ
+  ↓
+БИЗНЕС И ПРОИЗВОДСТВО
+  ↓
+ИНВЕСТИЦИИ И КАПИТАЛ
+  ↓
+НАУКА И ТЕХНОЛОГИИ
+  ↓
+ПРОМЫШЛЕННОСТЬ И РЕАЛЬНАЯ ЭКОНОМИКА
+  ↓
+ВНЕШНЯЯ ВЫРУЧКА / ДОХОД
+  ↓
+ПЛАТЕЖ И РАСЧЁТ
+  ↓
+БУХГАЛТЕРСКАЯ ИСТИНА
+  ↓
+РЕИНВЕСТИРОВАНИЕ / РАСПРЕДЕЛЕНИЕ
+  ↓
+ЧЕЛОВЕК
+```
 
-Регулируемый контур платежа и бухгалтерской истины:
+Искусственный интеллект помогает анализировать и предлагать решения. Платёжная система исполняет платежи. Financial OS считает экономический результат. Блокчейн фиксирует доказательства. Сеть переносит данные. Архиваторы уменьшают объём хранения и передачи. Meta-OS запускает сервисы. TURBO/XPU — исследовательская база будущей вычислительной машины.
 
-`PaymentIntent → FundingReservation → Execution → SettlementEvidence → Reconciliation → Double Entry → Financial Close → Reversal/Compensation`.
+Главная идея очень проста:
 
-**KPI:** полный audit trail, отсутствие двойного признания, settlement-backed PnL, корректные HardNAV/liquidity/liabilities.
-
-### Pilot C — MIDAS Institutional Capital Engine
-
-- multi-model market intelligence;
-- global capacitated liquidity graph;
-- OOS / walk-forward / shadow validation;
-- costs/slippage/market impact/capacity;
-- bounded `TradingExecutionIntent`;
-- признание PnL только после settlement + reconciliation.
-
-**KPI:** наличие/отсутствие устойчивого внешнего edge после всех расходов. До получения требуемых разрешений live-торговля клиентскими средствами не является частью базового sandbox perimeter.
-
-### Pilot D — Blockchain Budget / Public Finance Evidence
-
-- budget/procurement/payment/delivery traceability;
-- Merkle evidence;
-- anomaly detection;
-- MOCK vs realized evidence separation;
-- audit-time / error / loss-prevention measurement.
-
-### Pilot E — Federation V3 Secure Event Fabric
-
-- immutable typed contracts;
-- signed event envelopes;
-- transactional outbox/inbox;
-- persistent replay ledger;
-- delivery leases/recovery;
-- at-least-once + idempotent consumption;
-- DLQ / quarantine;
-- compensating flows;
-- SynergyNet store-forward;
-- Meta-OS orchestration without financial authority;
-- PQ signature provider boundary.
-
-### Pilot F — Science → Falsification → Industry
-
-`Hypothesis → Simulation → Falsification → Experiment → Reproduction → TRL → IP → Commercialization → Industrial Project`.
-
-Scientific hypothesis is never promoted to scientific truth without reproducible evidence.
+> **каждая технология делает только то, что умеет доказуемо делать, и не притворяется другой системой.**
 
 ---
 
-## 3. Почему нужна регуляторная песочница
+# 2. Почему проект настолько большой
 
-СИНЕРГИЯ пересекает платежи, инвестиции, algorithmic trading, digital assets, accounting, AI-assisted decisions, public finance, identity/data и cross-border interoperability.
+СИНЕРГИЯ выросла не из одного приложения. За несколько лет появлялись отдельные направления: трейдинг, AI, платежи, токены, персональные финансы, блокчейн, государственный бюджет, научные расчёты, операционная система, XPU, сети и архиваторы.
 
-Песочница позволяет отдельно проверить:
+Вместо того чтобы выбросить старые поколения и собрать красивый, но пустой монорепозиторий, проект сохраняет их как **технологическую эволюцию**.
 
-1. **Technology** — contracts, event delivery, failure recovery, reconciliation.
-2. **Economics** — создаётся ли внешняя ценность после расходов.
-3. **Risk** — replay, crash, reversal, liquidity stress, key compromise.
-4. **Compliance** — KYC/AML, licensed partner boundaries, data handling, approvals.
-5. **Consumer protection** — отсутствие скрытых гарантий доходности и смешения средств.
-6. **Scalability** — переход от одного пилота к федерации независимых доменов.
+Сегодня структура выглядит так:
 
-### Sandbox perimeter
+```text
+45 TECHNICAL REPOSITORIES
+        │
+        ├── Personal Capital
+        ├── Business / Growth OS
+        ├── Financial OS
+        ├── MetaPay
+        ├── MIDAS
+        ├── Global Market Graph
+        ├── NEXUS / OLGA / AUTOPILOT
+        ├── Science Agent
+        ├── Productive Economy
+        ├── Budget / GovTech
+        ├── AI Blockchain
+        ├── MetaChain
+        ├── SynergyNet
+        ├── Data Fabric / Compressors
+        ├── Meta-OS
+        ├── TURBO Linux
+        └── XPU / EML
 
-По умолчанию: synthetic/mock funds, testnet, shadow/paper execution, limited datasets. Реальные клиентские средства, regulated instruments или внешнее payment execution включаются только при соответствующем правовом основании и/или через лицензированного партнёра.
++ 1 MASTER DOSSIER
+        └── synergy_project
+```
+
+Полный реестр: [`REPOSITORIES.md`](REPOSITORIES.md)  
+Полный аудит технологий всех 46 observed repo: [`TECHNOLOGY_AUDIT_46.md`](TECHNOLOGY_AUDIT_46.md)
 
 ---
 
-## 4. Архитектура
+# 3. Главный принцип: реальность важнее красивых цифр
+
+В центре СИНЕРГИИ находится жёсткое экономическое правило:
+
+> ## **No external settlement ⇒ no external profit.**
+> ## **Нет внешнего расчёта — нет внешней прибыли.**
+
+Это значит:
+
+```text
+напечатать токен                 != заработать деньги
+сделать rebase                   != заработать деньги
+поднять внутреннюю цену          != заработать деньги
+переложить свои резервы          != заработать деньги
+взять flash loan                 != заработать деньги
+увеличить внутренний TVL         != заработать деньги
+получить красивый backtest       != получить реальную прибыль
+получить ответ AI                != доказать факт
+записать число в blockchain      != создать экономическую ценность
+```
+
+Реальная стоимость появляется только там, где есть внешний источник:
+
+- продажа реального товара или услуги;
+- прибыль производственного проекта;
+- внешнее инвестиционное вознаграждение;
+- реализованный торговый P&L;
+- комиссия за реальную услугу;
+- погашение реального требования;
+- другой экономически обеспеченный внешний cash flow.
+
+Это правило специально встроено в архитектуру, чтобы проект **не мог сам себя обмануть внутренней переоценкой**.
+
+---
+
+# 4. Как устроена СИНЕРГИЯ
 
 ```mermaid
 flowchart TD
-    U[User / Business / Institution / Public Pilot]
-    APP[Personal Capital / Business OS / Clients]
-    N[NEXUS Reasoning]
-    A[AUTOPILOT Policy Orchestration]
-    M[MIDAS Trading Intelligence]
-    P[MetaPay Settlement]
-    F[Financial OS Accounting Truth]
-    B[PQ Blockchain Commitments]
-    MC[MetaChain Verification]
-    SN[SynergyNet Transport]
-    MO[Meta-OS Runtime]
-    S[Synergy System Constitution]
+    HUMAN[Человек / Бизнес / Государство]
+    APP[Личный капитал / Growth OS]
+    N[NEXUS Intelligence]
+    AUTO[AUTOPILOT]
+    MIDAS[MIDAS]
+    GRAPH[Global Market Graph]
+    PAY[MetaPay]
+    FIN[Financial OS]
+    DATA[SYNERGY Data Fabric]
+    NET[SynergyNet]
+    BC[AI Blockchain]
+    META[MetaChain]
     SCI[Science Agent]
-    EUR[Eurasian Productive Economy]
-    GOV[Budget Evidence]
+    ECON[Productive Economy]
+    GOV[Blockchain Budget]
+    MOS[Meta-OS]
+    HOST[TURBO Linux / XPU]
 
-    U --> APP
-    APP --> F
+    HUMAN --> APP
+    APP --> FIN
     APP --> N
-    N --> A
-    A --> MO
-    M --> P
-    P --> F
-    F --> B
-    B --> MC
-    GOV --> F
-    SCI --> EUR
-    EUR --> F
-    SN <--> MO
-    S --> N
-    S --> A
-    S --> M
-    S --> P
-    S --> F
-    S --> B
-    S --> MC
+    N --> AUTO
+    AUTO --> MOS
+    MIDAS --> PAY
+    GRAPH --> MIDAS
+    PAY --> FIN
+    SCI --> ECON
+    ECON --> FIN
+    GOV --> FIN
+    FIN --> BC
+    PAY --> BC
+    BC --> META
+    DATA <--> NET
+    DATA <--> FIN
+    DATA <--> MIDAS
+    DATA <--> SCI
+    DATA <--> GOV
+    NET <--> MOS
+    MOS --> HOST
 ```
-
-### One authority per fact
-
-| Факт / полномочие | Канонический владелец |
-|---|---|
-| Architecture / constitution / authority / evidence registry | `synergy_system` |
-| Runtime orchestration | `synergy_meta_os` |
-| P2P transport | `synergynet` |
-| Reasoning | `agi_nexus` |
-| Action/policy orchestration | `agi_autopilot` |
-| Trading intelligence | `midas_ai` |
-| Payment execution / settlement | `synergy_pay_system` |
-| Accounting truth / HardNAV | `synergy_financial_os` |
-| PQ commitments | `synergy_ai_blockchain` |
-| Cross-chain verification | `synergy_metachain` |
-| Budget/procurement traceability | `blochain_budget` |
-| Household product | `synergy_app` |
-| Productive economy | `synergy_eurasian` |
-| Science workflow | `nexus_science_agent` |
 
 ---
 
-## 5. Secure Event Fabric
+# 5. «Личный капитал» — система человека
+
+Один из самых понятных входов в СИНЕРГИЮ — приложение **«Личный капитал»**.
+
+Его базовая идея:
 
 ```text
-Validated Contract
-      ↓
-Signed Immutable Event Envelope
-      ↓
-Transactional Outbox
-      ↓
-SynergyNet Store-Forward
-      ↓
-Persistent Inbox + Replay Ledger
-      ↓
-Domain Consumer
-      ↓
-ACK / Retry / DLQ / Quarantine / Compensation
+Доходы − Расходы = Дельта
+Дельта → Резерв + Погашение долгов + Инвестиции
+Инвестиции → Активы
+Активы − Пассивы = Чистый капитал
+Капитал × Время × Сложный процент → Финансовая устойчивость
 ```
 
-### Invariants
+Но приложение должно быть не обычным учётом расходов.
 
-- `at-least-once delivery + idempotent consumer`;
-- same `contract_id` + different hash/type/route = conflict, not harmless duplicate;
-- retry does not mutate signed economic fact;
-- reversal creates a new append-only fact;
-- payment/accounting truth and outbox event commit atomically inside each domain;
-- transport has no financial authority;
-- Meta-OS has no payment/accounting authority;
-- blockchain does not recompute HardNAV.
+Целевая система включает:
 
-### PQ security
+- бюджет;
+- финансовые конверты;
+- резерв на 3–6 месяцев;
+- долги и стоимость обслуживания долга;
+- инвестиционные цели;
+- прогноз сложного процента;
+- стресс-сценарии;
+- финансовую свободу как измеримую цель;
+- AI-помощника;
+- связь с остальными экономическими сервисами СИНЕРГИИ.
 
-Primary R&D profile: ML-DSA; SLH-DSA is a heavier backup profile. Production private-key custody must move to dedicated HSM/KMS/key-registry boundaries; process-local keys are not production custody.
-
----
-
-## 6. Economic truth firewall
-
-> **No external settlement ⇒ no external profit.**
-
-Not external profit by itself:
-
-- mint/rebase;
-- internal token mark;
-- transfer between own accounts/reserves;
-- flash-loan principal;
-- own LP revaluation;
-- backtest without OOS/cost/capacity;
-- scenario AI uplift;
-- new participant contribution;
-- unverified scientific claim.
-
-Canonical value chain:
-
-`real demand → verified transaction/project → settlement → reconciliation → recognized revenue/PnL → reserves/liabilities → distributable capacity → reinvestment`.
+Канонический продукт: [`Shtenco/synergy_app`](https://github.com/Shtenco/synergy_app)
 
 ---
 
-## 7. Product domains
+# 6. Business / Growth OS — цифровая система бизнеса
 
-### Personal Capital
+СИНЕРГИЯ рассматривает бизнес как второй большой источник реальной экономической ценности.
 
-`Income − Expenses = Delta → Investment → Assets → Net Capital → Financial Freedom`, дополнено reserve/debt/stress/scenario engines.
+Growth OS объединяет:
 
-### Business / Growth OS
+- CRM;
+- продажи;
+- AI SMM;
+- AI CFO;
+- работу с клиентами;
+- автоматизацию процессов;
+- франчайзинг;
+- партнёрские программы;
+- бизнес-аналитику;
+- AI-отделы;
+- человеческий контроль.
 
-Network/franchise/referral mechanics допускаются только если economic reward связан с real sale/service/economic contribution.
+Важная граница:
 
-> `recruitment ≠ revenue`
+> **recruitment ≠ revenue**
 
-### Financial OS / Development Fund
+Вознаграждение должно возникать за реальную продажу, услугу или измеримый вклад, а не просто за привлечение нового участника.
 
-- liquidity buckets;
-- liabilities;
-- reserves;
-- project allocations;
-- realized external PnL;
-- distribution capacity;
-- replay/restatement/reversal;
-- audit trail.
-
-### MetaPay
-
-Разделяет `unit_of_account`, `payment_asset`, `reserve_asset`, `risk/growth_asset`, а также routing, funding, settlement и reconciliation.
-
-### MIDAS
-
-Institutional intelligence layer, не гарантия доходности.
-
-### Budget Blockchain
-
-Blockchain — evidence/commitment layer, не замена первичным документам, treasury или accounting.
-
-### Science & Industry
-
-Research results проходят falsification/reproduction/TRL gates перед productive-project financing.
+Ключевой проект: [`Shtenco/synergychain`](https://github.com/Shtenco/synergychain)
 
 ---
 
-## 8. Current engineering status
+# 7. Financial OS — экономическая правда всей системы
 
-**Production-ready статус не заявляется.**
+Если представить СИНЕРГИЮ организмом, **Financial OS — это бухгалтерская память и экономическая совесть системы**.
 
-| Контур | Статус на 06.09.2026 |
-|---|---|
-| Federation V3 / 45 repo authority map | implemented candidate / open federation work |
-| Contracts V1 | typed schemas + runtime types + negative tests |
-| Secure Event Fabric | outbox/inbox/replay/DLQ/quarantine/lease recovery candidate |
-| SynergyNet | durable opaque store-forward transport candidate |
-| Meta-OS | persistent routing/replay candidate |
-| MetaPay | settlement + transactional outbox candidate |
-| Financial OS | accounting/HardNAV + transactional outbox candidate |
-| AI Blockchain | typed PQ commitments / ML-DSA R&D candidate |
-| MetaChain | finality/light-client/bridge-proof contract layer candidate |
-| MIDAS | canonical target + large institutional R&D lineage |
-| NEXUS / AUTOPILOT | bounded reasoning/control R&D |
-| Personal Capital | canonical product target |
-| Budget | public-finance traceability target |
-| Science Agent | falsification→TRL→commercialization target |
-| XPU / TURBO | compute/host R&D |
+Она должна отвечать на вопросы:
 
-### Current evidence boundary
+- сколько у нас действительно денег;
+- сколько обязательств;
+- какой HardNAV;
+- какая ликвидность;
+- какой доход реально признан;
+- что является прибылью, а что внутренним перемещением;
+- сколько можно безопасно распределить;
+- что произошло после отмены/возврата/ошибки;
+- можно ли воспроизвести состояние прошлого периода.
 
-Reference E2E covers:
+Целевой pipeline:
 
-`MIDAS → MetaPay → Financial OS → Blockchain → MetaChain`.
+```text
+ВНЕШНЕЕ СОБЫТИЕ
+      ↓
+SETTLEMENT EVIDENCE
+      ↓
+ECONOMIC CLASSIFICATION
+      ↓
+REVENUE / P&L RECOGNITION
+      ↓
+DOUBLE ENTRY
+      ↓
+ACCOUNTING CLOSE
+      ↓
+HardNAV / LIQUIDITY / SOLVENCY
+      ↓
+AVAILABLE CAPACITY
+      ↓
+REINVESTMENT / DISTRIBUTION
+```
 
-Next proof target: **literal multi-repo / multi-process E2E with native checkouts**. Until then the correct status remains pre-production/sandbox R&D.
-
----
-
-# 9. Полная открытая карта 45/45 репозиториев + оценка IP
-
-Ниже нет скрытого `<details>`: инвестор/грантовый эксперт видит весь портфель сразу.
-
-**Все цифры — USD millions.**  
-`Replacement` = ориентир стоимости воспроизведения.  
-`Current IP` = внутренняя risk-adjusted оценка технологии/know-how сегодня.  
-`Post-sandbox` = сценарная option value после evidence gates, **не сегодняшняя цена**.
-
-| # | Repo | Класс / роль | Replacement | Current IP | Post-sandbox |
-|---:|---|---|---:|---:|---:|
-| 1 | [shtenco.github.io](https://github.com/Shtenco/shtenco.github.io) | PUBLIC_PROVENANCE / presentation | 0.03–0.08 | 0.02–0.06 | 0.03–0.10 |
-| 2 | [quantum-trading_metatrader5](https://github.com/Shtenco/quantum-trading_metatrader5) | LEGACY_R&D / trading experiment | 0.08–0.20 | 0.05–0.15 | 0.10–0.30 |
-| 3 | [computer_vision_trading_metatrader_5](https://github.com/Shtenco/computer_vision_trading_metatrader_5) | R&D_SOURCE / CV market representation | 0.10–0.25 | 0.07–0.20 | 0.15–0.40 |
-| 4 | [swap_arbitrage_metatrader_5](https://github.com/Shtenco/swap_arbitrage_metatrader_5) | R&D_SOURCE / carry-swap research | 0.08–0.20 | 0.05–0.15 | 0.10–0.30 |
-| 5 | [cross_forex_arbitrage_trading_metatrader_5](https://github.com/Shtenco/cross_forex_arbitrage_trading_metatrader_5) | R&D_SOURCE / cross-rate graph arbitrage | 0.10–0.25 | 0.07–0.20 | 0.15–0.40 |
-| 6 | [global_liquidity_dataminer](https://github.com/Shtenco/global_liquidity_dataminer) | R&D_SOURCE / liquidity-macro features | 0.10–0.30 | 0.08–0.25 | 0.20–0.60 |
-| 7 | [3D_bars_market_structure](https://github.com/Shtenco/3D_bars_market_structure) | R&D_SOURCE / volume-time-price structure | 0.12–0.35 | 0.10–0.30 | 0.25–0.70 |
-| 8 | [multi_threaded_trading_robot_with_machine_learning_python](https://github.com/Shtenco/multi_threaded_trading_robot_with_machine_learning_python) | R&D_SOURCE / parallel ML trading | 0.15–0.40 | 0.10–0.30 | 0.20–0.60 |
-| 9 | [midas_ai_trading_system](https://github.com/Shtenco/midas_ai_trading_system) | R&D_SOURCE / institutional MIDAS lineage | 0.60–1.50 | 0.45–1.20 | 1.20–3.00 |
-| 10 | [midas_lite](https://github.com/Shtenco/midas_lite) | LEGACY_SOURCE / compact MIDAS | 0.08–0.20 | 0.04–0.12 | 0.08–0.20 |
-| 11 | [turbo_linux](https://github.com/Shtenco/turbo_linux) | ACTIVE_R&D_TARGET / host-runtime | 0.50–1.50 | 0.35–1.20 | 1.00–3.00 |
-| 12 | [agi_olga](https://github.com/Shtenco/agi_olga) | ACTIVE_R&D_SOURCE / OLGA→NEXUS lineage | 0.80–2.00 | 0.60–1.50 | 1.50–4.00 |
-| 13 | [ai_coder](https://github.com/Shtenco/ai_coder) | ENGINEERING_CONTROL / change evidence | 0.15–0.40 | 0.10–0.30 | 0.30–0.80 |
-| 14 | [ai_trade_terminal](https://github.com/Shtenco/ai_trade_terminal) | LEGACY_SOURCE / trading terminal | 0.15–0.35 | 0.08–0.25 | 0.20–0.60 |
-| 15 | [shtencoauantai.github.io](https://github.com/Shtenco/shtencoauantai.github.io) | PUBLIC_PROVENANCE / quant-AI showcase | 0.05–0.15 | 0.03–0.10 | 0.05–0.20 |
-| 16 | [cashero](https://github.com/Shtenco/cashero) | LEGACY_TOKENOMIC_R&D | 0.10–0.30 | 0.05–0.20 | 0.10–0.40 |
-| 17 | [ai_language](https://github.com/Shtenco/ai_language) | ENGINEERING_CORE / semantic requirements | 0.40–1.00 | 0.30–0.80 | 1.00–2.50 |
-| 18 | [sinergy-super-app](https://github.com/Shtenco/sinergy-super-app) | APPLICATION_CLIENT / super-app lineage | 0.20–0.60 | 0.10–0.40 | 0.40–1.20 |
-| 19 | [binary_quantum_theory](https://github.com/Shtenco/binary_quantum_theory) | SCIENTIFIC_R&D / candidate physics framework | 0.40–1.20 | 0.20–0.80 | 0.80–3.00 |
-| 20 | [ai_financial_system](https://github.com/Shtenco/ai_financial_system) | R&D_SOURCE / AMM-QE-QT-MEV | 0.50–1.20 | 0.30–0.90 | 0.80–2.50 |
-| 21 | [algotrading_graph_system](https://github.com/Shtenco/algotrading_graph_system) | R&D_TARGET / global capacitated market graph | 0.10–0.30 | 0.08–0.25 | 0.40–1.20 |
-| 22 | [ai_compress](https://github.com/Shtenco/ai_compress) | ENGINEERING_CORE / compression-dedup | 0.20–0.60 | 0.15–0.45 | 0.50–1.50 |
-| 23 | [synergy_pay_system](https://github.com/Shtenco/synergy_pay_system) | CANONICAL_DOMAIN / MetaPay | 0.70–1.80 | 0.60–1.50 | 2.00–5.00 |
-| 24 | [synergy_ai_blockchain](https://github.com/Shtenco/synergy_ai_blockchain) | CANONICAL_TARGET / PQ trust | 0.70–1.80 | 0.55–1.40 | 2.00–5.00 |
-| 25 | [synergychain](https://github.com/Shtenco/synergychain) | APPLICATION_CONTROL_PLANE / Business OS | 0.50–1.30 | 0.40–1.00 | 1.50–4.00 |
-| 26 | [synergychain.github.io](https://github.com/Shtenco/synergychain.github.io) | PRESENTATION / public portal | 0.08–0.20 | 0.05–0.12 | 0.10–0.30 |
-| 27 | [cold_nuclear](https://github.com/Shtenco/cold_nuclear) | SCIENTIFIC_R&D / LENR-transmutation | 0.20–0.70 | 0.08–0.40 | 0.50–3.00 |
-| 28 | [usds](https://github.com/Shtenco/usds) | MONETARY_R&D / stable-money research | 0.15–0.40 | 0.08–0.25 | 0.20–0.80 |
-| 29 | [synergy_financial_os](https://github.com/Shtenco/synergy_financial_os) | CANONICAL_TARGET / accounting truth | 0.90–2.30 | 0.80–2.00 | 3.00–8.00 |
-| 30 | [synergy_eurasian](https://github.com/Shtenco/synergy_eurasian) | CANONICAL_DOMAIN_TARGET / productive economy | 0.40–1.20 | 0.30–1.00 | 1.50–5.00 |
-| 31 | [synergy_matrix_sota](https://github.com/Shtenco/synergy_matrix_sota) | CANONICAL_DOMAIN_TARGET / household model | 0.20–0.60 | 0.15–0.45 | 0.50–1.50 |
-| 32 | [agi_nexus](https://github.com/Shtenco/agi_nexus) | CANONICAL_TARGET / bounded reasoning | 0.90–2.50 | 0.70–2.00 | 3.00–8.00 |
-| 33 | [midas_ai](https://github.com/Shtenco/midas_ai) | CANONICAL_TARGET / institutional trading intelligence | 0.90–2.50 | 0.80–2.20 | 3.00–8.00 |
-| 34 | [synergy_system](https://github.com/Shtenco/synergy_system) | CANONICAL_ROOT / federation constitution | 0.80–2.20 | 0.70–1.80 | 3.00–7.00 |
-| 35 | [nexus_science_agent](https://github.com/Shtenco/nexus_science_agent) | CANONICAL_TARGET / science workflow | 0.30–0.90 | 0.25–0.70 | 1.00–3.00 |
-| 36 | [synergynet](https://github.com/Shtenco/synergynet) | CANONICAL_TARGET / P2P evidence transport | 0.60–1.60 | 0.50–1.30 | 2.00–5.00 |
-| 37 | [synergy_meta_os](https://github.com/Shtenco/synergy_meta_os) | CANONICAL_TARGET / runtime orchestration | 0.50–1.40 | 0.40–1.10 | 1.50–4.00 |
-| 38 | [blochain_budget](https://github.com/Shtenco/blochain_budget) | CANONICAL_DOMAIN_TARGET / GovTech evidence | 0.40–1.20 | 0.30–0.90 | 1.50–5.00 |
-| 39 | [agi_autopilot](https://github.com/Shtenco/agi_autopilot) | CANONICAL_TARGET / bounded action orchestration | 0.50–1.50 | 0.40–1.20 | 2.00–6.00 |
-| 40 | [sinergy_app](https://github.com/Shtenco/sinergy_app) | LEGACY_PLACEHOLDER | 0.01–0.03 | 0.00–0.02 | 0.00–0.05 |
-| 41 | [synergy_app](https://github.com/Shtenco/synergy_app) | CANONICAL_PRODUCT_TARGET / Personal Capital | 0.30–0.90 | 0.25–0.70 | 1.00–3.00 |
-| 42 | [qr_compress](https://github.com/Shtenco/qr_compress) | R&D_TARGET / offline compact payloads | 0.15–0.45 | 0.10–0.35 | 0.40–1.20 |
-| 43 | [synergy_metachain](https://github.com/Shtenco/synergy_metachain) | CANONICAL_TARGET / cross-chain verification | 0.50–1.40 | 0.40–1.10 | 1.50–4.00 |
-| 44 | [motherboard_xpu_xml](https://github.com/Shtenco/motherboard_xpu_xml) | ACTIVE_R&D_TARGET / compiled-graph XPU | 0.80–2.50 | 0.60–2.00 | 2.50–8.00 |
-| 45 | [print_money_synergychain](https://github.com/Shtenco/print_money_synergychain) | FALSIFICATION_R&D / HardNAV-profit firewall | 0.20–0.60 | 0.10–0.40 | 0.30–1.00 |
-
-**45 / 45 repositories listed.**
-
-Подробный due-diligence annex: [`IP_VALUATION.md`](./IP_VALUATION.md).  
-Открытый repo-only registry: [`REPOSITORIES.md`](./REPOSITORIES.md).
+Канонический владелец бухгалтерской истины: [`Shtenco/synergy_financial_os`](https://github.com/Shtenco/synergy_financial_os)
 
 ---
 
-# 10. IP / technology / know-how valuation
+# 8. MetaPay — платёжная система
 
-## 10.1 Методология
+MetaPay не решает, заработала ли СИНЕРГИЯ деньги. Она отвечает на другой вопрос:
 
-Для раннего technology/IP portfolio используется гибридная логика, соответствующая базовым подходам WIPO:
+> **что было реально отправлено, исполнено, рассчитано и сверено?**
 
-1. **Cost / replacement / reproduction approach** — главный baseline для pre-revenue technology.
-2. **Market/comparable approach** — sanity-check, когда существуют сопоставимые сделки.
-3. **Income approach** — применим только к отделимым и реалистично прогнозируемым cash flows.
-4. **Real-options approach** — полезен для R&D, где стоимость раскрывается по мере снятия технических/регуляторных рисков.
+```text
+Payment Intent
+   ↓
+Funding Reservation
+   ↓
+Route / Quote
+   ↓
+Execution
+   ↓
+Settlement
+   ↓
+Reconciliation
+   ↓
+Receipt
+   ↓
+Financial OS
+```
 
-WIPO отдельно подчёркивает, что стоимость ранней IP контекстна, зависит от maturity, uncertainty, future economic benefits и не равна transaction price.
+Архитектура охватывает исследования fiat, crypto, CBDC, CEX, DEX, bridges, банковских и merchant-интеграций, но наличие адаптера в коде не означает автоматически наличие банковского договора, лицензии или production-доступа.
 
-### What is included
+Канонический проект: [`Shtenco/synergy_pay_system`](https://github.com/Shtenco/synergy_pay_system)
 
-- source code;
-- architecture;
-- algorithms;
-- mathematical models;
-- model/benchmark lineage;
-- data schemas and typed contracts;
-- test/failure/recovery semantics;
-- product/process know-how;
-- experimental protocols;
-- accumulated negative results and engineering decisions;
-- transfer/documentation value where present.
+---
 
-### What is not automatically included
+# 9. MIDAS — цифровой инвестиционный комитет
 
-- valuation of the legal entity/company;
-- future revenue that has not been earned;
-- brand goodwill not independently valued;
-- customer contracts that do not exist;
-- regulatory approvals not yet obtained;
-- patents not yet granted;
-- unverified scientific claims;
-- simulated trading PnL.
+MIDAS — одна из самых больших исследовательских линий проекта.
 
-## 10.2 Gross repo-level sum
+Это не один торговый робот. Целевая идея — **многоуровневая система инвестиционного принятия решений**:
 
-Mechanical sum of 45 repo bands:
+```text
+Market Data
+   ↓
+Causal Alignment
+   ↓
+Features
+   ↓
+Statistical / ML / Graph / Vision Experts
+   ↓
+Regime Models
+   ↓
+Portfolio Allocator
+   ↓
+Independent Risk Engine
+   ↓
+Execution
+   ↓
+Reconciliation
+   ↓
+Realized External P&L
+   ↓
+Financial OS
+```
 
-- **Replacement / reproduction:** **$15.7–43.3M**;
-- **Current risk-adjusted IP/know-how:** **$11.9–34.0M**;
-- **Post-sandbox option scenario:** **$43.5–123.4M**.
+В исторических репозиториях накоплены:
 
-## 10.3 Portfolio overlap adjustment
+- CatBoost / XGBoost / LSTM / RL исследования;
+- компьютерное зрение рынка;
+- 3D volume-time-price bars;
+- carry/swap portfolios;
+- cross-rate arbitrage;
+- global liquidity features;
+- multi-threaded trading;
+- portfolio/risk engines;
+- MetaTrader infrastructure;
+- множество поколений MIDAS.
 
-Repo-level sums double-count shared know-how and lineage. Для conservative portfolio view применяется внутренний **25% overlap/correlation haircut**.
+Новые версии должны проходить:
 
-После haircut:
+`TRAIN → TEST → OOS → WALK-FORWARD → SHADOW → LIVE → RECONCILED`.
 
-> **Indicative replacement/reproduction portfolio: $11.8–32.5M.**
+Backtest никогда не становится реальным доходом автоматически.
 
-> **Current indicative technology/IP/know-how portfolio: $8.9–25.5M.**
+Канонический target: [`Shtenco/midas_ai`](https://github.com/Shtenco/midas_ai)
 
-> **Post-sandbox option portfolio: $32.6–92.5M.**
+---
 
-Для презентации можно округлять:
+# 10. Глобальный граф денег и ликвидности
 
-> **Текущая внутренняя оценка IP/know-how СИНЕРГИИ: ~$9–26M.**
+Отдельное направление строит мировой рынок как граф.
 
-Это **не independent appraisal, не audited fair value и не offer price**.
+Узел — это не просто «USD» или «банк».
 
-## 10.4 Cluster valuation — gross before overlap haircut
+```text
+Node =
+(institution,
+ venue,
+ account/channel,
+ currency/asset,
+ settlement_date)
+```
 
-| Technology cluster | Replacement | Current IP | Post-sandbox option |
-|---|---:|---:|---:|
-| Core financial / trust / network | $5.2–14.0M | $4.35–11.4M | $17.0–44.0M |
-| AI / engineering | $2.55–6.8M | $1.95–5.3M | $6.8–18.3M |
-| Trading / market intelligence | $2.56–6.8M | $1.97–5.57M | $6.03–16.3M |
-| Product / economy / GovTech | $2.0–5.8M | $1.5–4.45M | $6.4–19.7M |
-| Compute / data | $1.65–5.05M | $1.2–4.0M | $4.4–13.7M |
-| Monetary / financial R&D | $0.95–2.5M | $0.53–1.75M | $1.4–4.7M |
-| Scientific R&D | $0.6–1.9M | $0.28–1.2M | $1.3–6.0M |
-| Presentation / legacy client | $0.17–0.46M | $0.10–0.30M | $0.18–0.65M |
+Ребро содержит:
 
-## 10.5 Highest-value know-how blocks
+```text
+rate
+fees
+capacity
+spread
+slippage
+latency
+settlement date
+available liquidity
+execution evidence
+```
 
-### Federation authority / evidence architecture
+На таком графе можно искать:
 
-- one-authority-per-fact;
-- producer/consumer contracts;
-- provenance + causation;
-- release/evidence ladder;
-- negative authority tests;
-- separation of reasoning, settlement, accounting and trust.
+- лучшие валютные маршруты;
+- циклы mispricing;
+- арбитражные кандидаты;
+- дешёвые пути ребалансировки;
+- capacity bottlenecks;
+- разницу между trading alpha и payment routing.
 
-### Financial OS
+Главный invariant:
 
-- HardNAV vs internal mark;
-- external-settlement-before-profit;
-- double-entry economic truth;
-- distributable capacity;
-- reversal/restatement;
-- settlement-backed PnL;
-- accounting commitments.
+> **AlphaGraph != RebalancingGraph**
 
-### MetaPay
+Исследовательский target: [`Shtenco/algotrading_graph_system`](https://github.com/Shtenco/algotrading_graph_system)
 
-`Intent → FundingReservation → Execution → SettlementEvidence → Reconciliation → Receipt → Reversal`.
+---
 
-### MIDAS
+# 11. NEXUS — интеллект, но не диктатор
 
-- multi-model institutional architecture;
-- feature/validation lineage;
-- OOS/walk-forward discipline;
-- cost/capacity sensitivity;
-- portfolio/risk modelling;
-- global-liquidity graph;
-- accumulated successful and failed experiments.
+NEXUS — исследовательская линия универсального reasoning engine.
 
-### NEXUS + AUTOPILOT
+Он может:
 
-- explicit UNKNOWN;
-- provenance;
-- typed graph semantics;
-- reasoning ≠ authorization;
-- capability/policy gates;
-- human escalation;
-- no direct financial authority.
+- рассуждать;
+- строить гипотезы;
+- анализировать графы;
+- прогнозировать;
+- объяснять;
+- предлагать решения;
+- работать с world models;
+- оценивать неопределённость.
 
-### Secure Event Fabric
+Но по архитектуре он **не получает автоматически власть над деньгами**.
 
-- signed immutable envelope;
-- outbox/inbox;
-- persistent replay ledger;
-- conflicting replay rejection;
-- delivery lease recovery;
-- DLQ/quarantine;
-- compensation instead of history rewrite;
-- PQ signer boundary.
+```text
+NEXUS
+  ↓ proposal
+AUTOPILOT
+  ↓ policy / capability
+DOMAIN AUTHORITY
+  ↓
+EXECUTION
+```
 
-### PQ Blockchain + MetaChain
+NEXUS не является автоматически:
+
+- бухгалтером;
+- банком;
+- подписантом;
+- владельцем treasury;
+- blockchain consensus;
+- production deployer.
+
+Канонический intelligence target: [`Shtenco/agi_nexus`](https://github.com/Shtenco/agi_nexus)  
+Историческая исследовательская линия: [`Shtenco/agi_olga`](https://github.com/Shtenco/agi_olga)  
+Контур действий: [`Shtenco/agi_autopilot`](https://github.com/Shtenco/agi_autopilot)
+
+---
+
+# 12. Science Agent — машина научной проверки
+
+СИНЕРГИЯ должна уметь не только зарабатывать и считать деньги, но и **создавать новые технологии**.
+
+Поэтому Science Agent строится не как «AI, который всегда знает ответ», а как система:
+
+```text
+ВОПРОС
+  ↓
+ПОИСК ИСТОЧНИКОВ
+  ↓
+CLAIMS / EVIDENCE GRAPH
+  ↓
+ПРОТИВОРЕЧИЯ
+  ↓
+ГИПОТЕЗА
+  ↓
+РАСЧЁТ / СИМУЛЯЦИЯ
+  ↓
+ПОПЫТКА ОПРОВЕРЖЕНИЯ
+  ↓
+ЭКСПЕРИМЕНТ
+  ↓
+ВОСПРОИЗВЕДЕНИЕ
+  ↓
+TRL
+  ↓
+IP / ПАТЕНТ
+  ↓
+ПРОИЗВОДСТВО
+```
+
+Научная гипотеза не становится истиной только потому, что AI или симуляция выдали красивое число.
+
+Проект: [`Shtenco/nexus_science_agent`](https://github.com/Shtenco/nexus_science_agent)
+
+Научные R&D-линии включают, среди прочего:
+
+- [`binary_quantum_theory`](https://github.com/Shtenco/binary_quantum_theory);
+- [`cold_nuclear`](https://github.com/Shtenco/cold_nuclear).
+
+Они остаются исследовательскими программами и не выдаются за экспериментально подтверждённую физику.
+
+---
+
+# 13. Productive Economy — переход от цифровых чисел к реальному производству
+
+Ключевая долгосрочная идея СИНЕРГИИ — **капитал должен уметь превращаться в реальные производительные активы**.
+
+```text
+Capital
+   ↓
+Project Proposal
+   ↓
+Economic Model
+   ↓
+Risk / Evidence
+   ↓
+Funding Decision
+   ↓
+Equipment / Infrastructure / Production
+   ↓
+Goods / Services
+   ↓
+External Revenue
+   ↓
+Financial OS
+```
+
+Исследуются:
+
+- промышленность;
+- инфраструктура;
+- сельское хозяйство;
+- региональное развитие;
+- производственные цепочки;
+- CAPEX;
+- мультипликаторы;
+- занятость;
+- импортозамещение;
+- технологическое развитие.
+
+Целевой домен: [`Shtenco/synergy_eurasian`](https://github.com/Shtenco/synergy_eurasian)
+
+---
+
+# 14. Blockchain Budget — прозрачность государственного бюджета
+
+Отдельная ветвь проекта переносит доказательную архитектуру на государственные расходы.
+
+Идея:
+
+```text
+Закон
+ ↓
+Бюджетное ассигнование
+ ↓
+Лимит
+ ↓
+Обязательство
+ ↓
+Контракт
+ ↓
+Поставщик
+ ↓
+Платёж
+ ↓
+Кассовое исполнение
+ ↓
+Evidence / Merkle Proof
+```
+
+Цель — не «посадить бюджет в токен», а сделать движение публичных средств **трассируемым и проверяемым**.
+
+Проект: [`Shtenco/blochain_budget`](https://github.com/Shtenco/blochain_budget)
+
+---
+
+# 15. SYNERGY Data Fabric — память всей системы
+
+Один из важнейших новых слоёв Федерации — **Data Fabric**.
+
+Раньше архиваторы `ai_compress` и `qr_compress` существовали почти отдельно. После полного аудита стало очевидно: это фундаментальная инфраструктура всей СИНЕРГИИ.
+
+Data Fabric должен обслуживать:
+
+- бухгалтерские snapshots;
+- settlement evidence;
+- MIDAS datasets и модели;
+- NEXUS artifacts;
+- научные datasets;
+- государственные архивы и proofs;
+- программный код;
+- логи;
+- модели;
+- node snapshots;
+- offline payloads;
+- будущий persistent state XPU.
+
+Главное правило:
+
+```text
+canonical_content_sha256 = hash исходного канонического объекта
+archive_sha256           = hash конкретного сжатого представления
+```
+
+Это означает:
+
+> один и тот же финансовый или научный факт может завтра быть пересжат другим codec, но его смысл и canonical hash не меняются.
+
+### `ai_compress`
+
+В накопленной линии есть:
+
+- EGD-256;
+- SABF-X;
+- HACE-X;
+- TSC-X;
+- AMCE-100X;
+- UMC-256;
+- Graph-AI Compression V5.2;
+- GRAAL-IGC;
+- Gabriel Horn `SGH1`;
+- Arithmetic / rANS / Huffman / Graph Delta;
+- MDL routing;
+- deduplication;
+- random access;
+- reproducимые benchmark и SHA-256 round-trip tests.
+
+Проект: [`Shtenco/ai_compress`](https://github.com/Shtenco/ai_compress)
+
+### `qr_compress`
+
+QTC1/QTC2 исследуют компактную offline-передачу:
+
+- shared temporal dictionary;
+- exact / patch / standalone modes;
+- temporal addressing;
+- residual compression;
+- QF1 multi-frame QR transport;
+- integrity checks;
+- offline references для evidence, identity, payment intents и node enrollment.
+
+Важно:
+
+> **QR transport != authorization**
+
+Сам факт, что QR или QTC payload прочитан, не даёт права списать деньги или изменить ledger.
+
+Проект: [`Shtenco/qr_compress`](https://github.com/Shtenco/qr_compress)
+
+---
+
+# 16. SynergyNet — сеть передачи доказательств и данных
+
+SynergyNet исследует P2P-сеть, где узлы могут быть:
+
+```text
+CLIENT
+RELAY
+CACHE
+GATEWAY
+BLOCKCHAIN PEER
+NEXUS COMPUTE
+METAPAY EDGE
+FULL SYNERGY NODE
+```
+
+Целевой pipeline:
+
+```text
+Object
+ ↓
+Chunking
+ ↓
+Content Hash
+ ↓
+Dedup
+ ↓
+Compression
+ ↓
+Authenticated Transport
+ ↓
+Multipath / Relay / Store-and-Forward
+ ↓
+Cache
+ ↓
+Reconstruction
+ ↓
+Integrity Verification
+```
+
+«Быстрее Интернета» пока является исследовательской гипотезой, а не подтверждённым фактом. Производительность должна сравниваться с реальными baseline TCP/QUIC/CDN/P2P.
+
+Проект: [`Shtenco/synergynet`](https://github.com/Shtenco/synergynet)
+
+---
+
+# 17. Blockchain и MetaChain — доказательство, а не источник истины
+
+Blockchain в СИНЕРГИИ не должен решать, сколько денег заработано.
+
+Это уже решил соответствующий authoritative domain.
+
+Blockchain получает готовый факт и фиксирует commitment:
+
+```text
+Domain Fact
+   ↓
+Canonical Bytes
+   ↓
+Hash / Typed Commitment
+   ↓
+Signature
+   ↓
+Blockchain
+   ↓
+Checkpoint / Proof
+```
+
+Цели направления:
 
 - typed commitments;
-- ML-DSA integration R&D;
-- accounting/trust separation;
-- light-client/finality/bridge-proof contracts;
-- future key rotation/revocation architecture.
+- post-quantum signatures;
+- checkpoints;
+- key rotation/revocation;
+- light clients;
+- bridge proofs;
+- cross-chain verification.
 
-### XPU + TURBO
+Проекты:
 
-- compiled graph execution;
-- global wavefront placement;
-- `chiplet→cluster→tile→lane→cycle` mapping;
-- switch/time-slot reservation;
-- host/runtime/virtualization architecture.
-
-### Budget / GovTech
-
-- budget→procurement→payment→delivery causal trace;
-- Merkle evidence;
-- anomaly modelling;
-- mock-vs-real outcome separation;
-- public-sector ROI methodology.
-
-### Science-to-industry process IP
-
-`Hypothesis → Falsification → Experiment → Reproduction → TRL → IP → Commercialization`.
-
-## 10.6 What can increase valuation materially
-
-- literal native multi-repo E2E;
-- independent security review;
-- HSM/KMS/key lifecycle;
-- regulatory sandbox approval/partner;
-- repeatable paying customers;
-- audited revenue attribution;
-- live-settled MIDAS evidence after costs;
-- measured GovTech pilot impact;
-- measurable Personal Capital cohort outcomes;
-- production SynergyNet benchmarks;
-- XPU FPGA/emulation/silicon evidence;
-- granted/strategically filed patents with clean title;
-- licensed datasets/model artifacts with clear rights.
-
-## 10.7 What can reduce valuation
-
-- unclear code/IP ownership;
-- contractor code without assignment;
-- incompatible OSS licenses;
-- leaked credentials/private keys;
-- unreproducible results;
-- working code only in non-canonical branches;
-- missing CI/tests;
-- scientific overclaim;
-- trading claims without settlement evidence;
-- single-person dependency without transfer documentation;
-- lack of buyer/customer validation.
-
-## 10.8 IP due diligence required before formal appraisal
-
-1. Formal `IP_REGISTER` for 45 repositories.
-2. Contributor/contractor chain-of-title evidence.
-3. SBOM / OSS-license audit.
-4. Classification: copyright / trade secret / patent candidate / dataset / model / trademark / process know-how.
-5. Prior-art search and patentability review.
-6. Secret remediation and key-rotation evidence.
-7. Exact valuation commit/hash per repo.
-8. Reproduction-cost worksheets.
-9. Market comparables where transaction data exists.
-10. Income valuation only after separable cash flows exist.
-11. Independent valuation before audited accounts, collateral, M&A or formal fair-value claims.
+- [`Shtenco/synergy_ai_blockchain`](https://github.com/Shtenco/synergy_ai_blockchain)
+- [`Shtenco/synergy_metachain`](https://github.com/Shtenco/synergy_metachain)
 
 ---
 
-## 11. Regulatory & compliance-by-design
+# 18. Meta-OS, TURBO Linux и XPU — вычислительное основание
 
-Fail-closed: absence of evidence is not permission.
+СИНЕРГИЯ исследует не только приложения, но и собственную вычислительную инфраструктуру.
 
-- KYC/KYB and AML/CFT where applicable;
-- segregation of own/client funds;
-- human/multisig critical approvals;
-- suitability/risk disclosure;
-- model-risk management;
-- data minimization/consent/retention/access control;
-- incident response and key rotation/revocation;
-- independent security review before production;
-- licensed broker/payment/custody partner where required;
-- no guaranteed-return marketing;
-- explicit `MOCK / SCENARIO / SHADOW / LIVE_SETTLED` labels.
+### Meta-OS
 
-### AI authority boundary
+Meta-OS — дирижёр одного узла:
 
-AI may analyze, rank, simulate, detect anomalies and propose actions.
+- запускает сервисы;
+- проверяет manifest;
+- выдаёт capabilities;
+- следит за health;
+- обновляет;
+- откатывает;
+- собирает audit evidence.
 
-AI may not by default:
+Но запуск сервиса не означает финансовое разрешение.
 
-- recognize accounting profit;
-- sign payments;
-- control client assets;
-- change authority policy;
-- declare a hypothesis scientifically proven;
-- self-promote the system to production-ready.
+Проект: [`Shtenco/synergy_meta_os`](https://github.com/Shtenco/synergy_meta_os)
 
----
+### TURBO Linux
 
-## 12. 18-month sandbox roadmap
+R&D собственного host/kernel/runtime направления:
 
-### Phase 0 — 0–2 months
+- capability-oriented primitives;
+- bounded IPC;
+- scheduler;
+- virtualization;
+- host isolation;
+- secure runtime research.
 
-- jurisdiction/sandbox perimeter;
-- legal mapping;
-- threat model;
-- KPI baseline;
-- partner roles;
-- protocol freeze.
+Проект: [`Shtenco/turbo_linux`](https://github.com/Shtenco/turbo_linux)
 
-### Phase 1 — 2–6 months
+### XPU / EML
 
-- synthetic/testnet funds;
-- literal multi-repo E2E;
-- persistent PQ key registry;
-- failure injection;
-- reversal/reconciliation tests;
-- regulator/auditor read-only dashboard.
+Самая дальняя вычислительная линия — persistent programmable dataflow XPU.
 
-### Phase 2 — 6–12 months
+Идея разделяет:
 
-- controlled users/organizations;
-- non-custodial Personal Capital;
-- shadow MIDAS;
-- sandbox MetaPay via partner/model rails;
-- budget/procurement pilot;
-- security/model-risk audit.
+```text
+Value State
+Graph State
+Persistent State
+```
 
-### Phase 3 — 12–18 months
+и исследует выполнение заранее скомпилированных вычислительных графов на тысячах lanes без центрального runtime walker.
 
-- KPI vs baseline/control;
-- promote only modules that pass gates;
-- limited live-settled operations where legally permitted;
-- commercialization package;
-- production architecture decision.
+Проект: [`Shtenco/motherboard_xpu_xml`](https://github.com/Shtenco/motherboard_xpu_xml)
+
+Это пока R&D-архитектура, а не изготовленный процессор.
 
 ---
 
-## 13. Sandbox KPI
+# 19. Печатный станок СИНЕРГИИ
 
-### Technology
+## Одна из самых необычных исследовательских идей проекта
 
-- 0 lost committed events;
-- 0 duplicate domain effects under redelivery;
-- 100% conflicting-replay detection in test corpus;
-- crash recovery;
-- complete provenance chain rate;
-- RTO/RPO by authority domain.
+В СИНЕРГИИ существует целая линия исследований, которую мы условно называем **«печатным станком»**.
 
-### Finance
+Название специально провокационное, но его зрелая идея **не состоит в создании денег из воздуха**.
 
-- 100% live PnL backed by settlement + reconciliation;
-- `HardNAV delta = reconciled external result` for matched transactions;
-- no distribution beyond verified capacity;
-- liquidity/reserve coverage.
+Печатный станок исследует другое:
 
-### Consumer
+> **можно ли использовать внутреннюю эмиссию, AMM, временную ликвидность, flash liquidity, bridges, market making, циклическое перераспределение и динамическое управление резервами как механизм ускорения уже существующего внешнего двигателя стоимости?**
 
-- savings rate;
-- reserve months;
-- debt-service burden;
-- risk-disclosure comprehension;
-- complaint/error/override rates.
+То есть правильная модель выглядит не так:
 
-### Public finance
+```text
+MINT
+ ↓
+PROFIT
+```
 
-- fully traceable case share;
-- audit time;
-- confirmed anomalies;
-- verified prevented/recovered loss.
+а так:
 
-### AI
+```text
+ВНЕШНИЙ ДВИГАТЕЛЬ СТОИМОСТИ
+(real business / trading / productive cash flow / service fee)
+             ↓
+        REAL VALUE
+             ↓
+      Financial OS
+             ↓
+      reserve / capital
+             ↓
+┌────────────────────────────────┐
+│  SYNERGY PRINT-MACHINE R&D     │
+│                                │
+│ mint / burn                    │
+│ internal AMM                   │
+│ market making                  │
+│ temporary liquidity            │
+│ flash liquidity                │
+│ bridges                        │
+│ inventory rebalancing          │
+│ reserve restoration            │
+│ capital routing                │
+└────────────────────────────────┘
+             ↓
+  ускорение оборота капитала
+             ↓
+  следующий внешний цикл
+```
 
-- selective-answer accuracy;
-- UNKNOWN quality;
-- provenance completeness;
-- false-positive/false-negative rate;
-- human override rate;
-- accepted prohibited authority escalations = 0.
+### Что в нём действительно интересно
 
-### Science/industry
+Внутренняя денежная/токенная система может быть полезна как:
 
-- falsified/validated hypotheses;
-- reproducible experiments;
-- TRL transitions;
-- IP artifacts;
-- industrial pilots;
-- external revenue from commercialized results.
+- механизм маршрутизации капитала;
+- временный liquidity layer;
+- средство балансировки inventory;
+- collateral/accounting representation;
+- внутренний расчётный контур;
+- автоматизированный market-making mechanism;
+- способ управлять скоростью оборота резервов;
+- способ направлять капитал из одного productive contour в другой.
+
+Но **это не создаёт внешний доллар само по себе**.
+
+Именно поэтому в наших последних моделях введён жёсткий firewall:
+
+```text
+internal mint             != external profit
+internal mark             != external profit
+own reserve movement      != external profit
+flash principal           != external profit
+synthetic TVL             != HardNAV
+```
+
+### Зачем тогда нужен «печатный станок»?
+
+Потому что если внешний двигатель действительно умеет создавать стоимость, внутренний денежный механизм теоретически может:
+
+1. быстрее направлять капитал туда, где он работает;
+2. уменьшать простой ликвидности;
+3. автоматически восстанавливать целевые резервы;
+4. распределять риски между контурами;
+5. использовать temporary liquidity вместо постоянного замораживания всего капитала;
+6. связывать trading, productive economy и treasury в единый управляемый цикл.
+
+Тогда «станок» становится не источником стоимости, а **мультипликатором эффективности капитала**.
+
+### Какие репозитории связаны с этой линией
+
+- [`Shtenco/ai_financial_system`](https://github.com/Shtenco/ai_financial_system) — AI Central Bank / AMM / QE / bridges / MEV / simulations;
+- [`Shtenco/usds`](https://github.com/Shtenco/usds) — mint/sell/reserve-restoration experiments;
+- [`Shtenco/print_money_synergychain`](https://github.com/Shtenco/print_money_synergychain) — отдельный falsification-контур внешней прибыли и HardNAV;
+- [`Shtenco/cashero`](https://github.com/Shtenco/cashero) — историческая cyclic-liquidity/tokenomics линия;
+- `synergy_financial_os` — финальный арбитр того, появилась ли реальная внешняя стоимость;
+- `synergy_pay_system` — реальный settlement;
+- `midas_ai` / productive economy — потенциальные внешние engines, но только после доказательства их фактического результата.
+
+### Самая важная формула печатного станка
+
+```text
+PRINT MACHINE VALUE
+    = External Productive/Trading Value
+    × Capital Efficiency
+    − Liquidity Costs
+    − Funding Costs
+    − Market Impact
+    − Gas / Fees
+    − Losses / Risk
+```
+
+Если первый член равен нулю, **никакая внутренняя эмиссия не спасает систему**.
+
+Это одна из принципиальных интеллектуальных границ проекта: СИНЕРГИЯ не пытается математически замаскировать эмиссию под доход. Наоборот, отдельный `print_money_synergychain` существует именно для того, чтобы **ломать такие модели и оставлять только то, что выдерживает проверку внешней стоимостью**.
 
 ---
 
-## 14. Business model after sandbox
+# 20. Secure Event Fabric — как независимые системы разговаривают друг с другом
 
-1. **B2C SaaS** — Personal Capital.
-2. **B2B SaaS/API** — Financial OS / Business OS / evidence APIs.
-3. **B2B2C infrastructure** — MetaPay through licensed partners.
-4. **Institutional licensing** — MIDAS analytics/risk tooling.
-5. **GovTech** — budget/procurement traceability.
-6. **Enterprise infrastructure** — Secure Event Fabric / federation tooling.
-7. **R&D commercialization** — licensing, IP, spin-outs, industrial projects.
+Большая система ломается, если один сервис может тихо изменить факт другого.
 
-Trading returns are not guaranteed project revenue.
+Поэтому Federation V3 развивает Secure Event Fabric:
 
----
+```text
+Validated Domain Contract
+       ↓
+Signed Immutable Envelope
+       ↓
+Transactional Outbox
+       ↓
+SynergyNet
+       ↓
+Persistent Inbox / Replay Ledger
+       ↓
+Domain Consumer
+       ↓
+ACK / RETRY / DLQ / QUARANTINE
+```
 
-## 15. Funding request
+Правила:
 
-### Regulatory/institutional partner
-
-Sandbox perimeter, compliance requirements, KPI supervision, permissioned pilot path.
-
-### Grant partner
-
-Funding tied to measurable deliverables: E2E reliability, security, GovTech pilot, science-to-industry reproducibility, independent validation.
-
-### Strategic/venture investor
-
-Capital goes to productizing evidence-backed modules rather than financing unverified claims.
-
-### Indicative use of funds
-
-- **30%** engineering / multi-repo E2E / reliability;
-- **20%** compliance / legal / security audit;
-- **15%** pilot infrastructure/data;
-- **15%** productization/UX;
-- **10%** independent validation/science reproducibility;
-- **10%** commercialization/IP/partner integrations.
+- доставка может быть `at-least-once`, но обработка должна быть idempotent;
+- конфликтующий replay запрещён;
+- retry не меняет исходный факт;
+- reversal создаёт новый append-only факт;
+- transport не получает финансовой authority;
+- Meta-OS не получает бухгалтерской authority;
+- AI не получает signing authority только потому, что он AI.
 
 ---
 
-## 16. Milestone-based financing
+# 21. One authority per fact
 
-| Gate | Deliverable | Capital opens if… |
-|---|---|---|
-| G0 | architecture + legal perimeter | authorities/KPI/risks defined |
-| G1 | closed E2E sandbox | native multi-process trace reproducible |
-| G2 | security/compliance validation | no unresolved critical findings |
-| G3 | controlled pilot | KPI show measurable effect |
-| G4 | limited live-settled | results confirmed by settlement/accounting |
-| G5 | commercialization | buyer/use case + unit economics exist |
+Это один из главных архитектурных законов всей Федерации.
 
----
-
-## 17. Key risks
-
-| Risk | Mitigation |
+| Что считается истиной | Кто отвечает |
 |---|---|
-| Scope too broad | independent pilots/gates |
-| Regulatory uncertainty | sandbox-first + licensed partners |
-| Internal-metric illusion | HardNAV + settlement firewall |
-| Model overfit | OOS/walk-forward/shadow/live evidence |
-| AI authority creep | authority registry + negative tests |
-| Event loss/duplication | outbox/inbox + replay/idempotency |
-| Key compromise | PQ provider + rotation + HSM/KMS path |
-| Blockchain as truth oracle | commitment layer only |
-| Scientific overclaim | falsification/reproduction/TRL |
-| MLM/network risk | recruitment-funded economics rejected |
-| Exponential-growth narrative | capacity/saturation/system dynamics |
-| Multi-repo complexity | typed contracts + federation root |
+| Архитектура, constitution, authority map | `synergy_system` |
+| Runtime orchestration | `synergy_meta_os` |
+| Host/kernel | `turbo_linux` |
+| Compute R&D | `motherboard_xpu_xml` |
+| P2P transport | `synergynet` |
+| Compression/archive profiles | `ai_compress` |
+| Offline compact transport | `qr_compress` — **без financial authority** |
+| Reasoning | `agi_nexus` |
+| Policy/action orchestration | `agi_autopilot` |
+| Scientific workflow | `nexus_science_agent` |
+| Trading intelligence | `midas_ai` |
+| Payment/settlement | `synergy_pay_system` |
+| Accounting / HardNAV | `synergy_financial_os` |
+| PQ blockchain commitments | `synergy_ai_blockchain` |
+| Cross-chain verification | `synergy_metachain` |
+| Productive economy modelling | `synergy_eurasian` |
+| Public budget traceability | `blochain_budget` |
+| Personal-capital product | `synergy_app` |
 
 ---
 
-## 18. Historical origin and modernization
+# 22. Что уже есть, а что ещё исследуется
 
-Conceptual lineage began in 2018 and by 2025 connected personal capital, consortium/fund, science, industry, AI and digital monetary/payment systems.
+СИНЕРГИЯ — большой проект, но мы специально не называем всю систему production-ready раньше времени.
 
-Federation V3 preserves long-horizon coordination and science→industry feedback but does **not** preserve historical assumptions as facts.
+### Уже существует как код / архитектура / воспроизводимые R&D-компоненты
 
-Not canonical truth:
+- 45-repository Federation map;
+- authority/evidence constitution;
+- Financial OS lineage;
+- MetaPay integration core;
+- MIDAS research corpus;
+- NEXUS/OLGA research generations;
+- business/Growth OS;
+- Personal Capital application lineage;
+- budget traceability engine;
+- science-agent architecture;
+- compression engines и benchmark infrastructure;
+- QTC/QTD temporal compression;
+- SynergyNet architecture;
+- Meta-OS architecture;
+- PQ blockchain/metachain R&D;
+- TURBO kernel/runtime research;
+- XPU quantitative architecture;
+- monetary/print-machine falsification experiments.
 
-- guaranteed yields;
-- fixed AI uplift percentages;
-- unconstrained exponential growth;
-- recruitment-funded economics;
-- internal token price as external wealth;
-- unverified science;
-- blockchain accounting authority;
-- unrestricted AI executive authority.
+### Ещё требуется доказать
 
-These can exist only as `HYPOTHESIS / SCENARIO / R&D` until re-earned by evidence.
+- literal multi-repo production-like E2E;
+- независимый security audit;
+- HSM/KMS/MPC production custody;
+- лицензированные live payment corridors;
+- устойчивый live-settled MIDAS edge;
+- реальный production SynergyNet benchmark;
+- широкие реальные budget pilots;
+- FPGA/silicon XPU evidence;
+- независимое воспроизведение научных результатов;
+- коммерческую экономику отдельных контуров.
 
----
+Именно поэтому правильная текущая формулировка:
 
-## 19. Research tracks
-
-### Financial / market
-capacitated liquidity graph, FX routing, market making, settlement-aware arbitrage, portfolio/risk intelligence, AMM/QE/QT/MEV falsification.
-
-### AI
-bounded NEXUS, typed graph semantics, UNKNOWN, provenance, policy/action orchestration, semantic requirements, AI engineering evidence.
-
-### Trust / security
-ML-DSA/SLH-DSA, signed contracts, durable transport, cross-chain verification, offline evidence payloads.
-
-### Compute
-TURBO, XPU, global wavefront placement, compression/dedup/content archive.
-
-### Science
-fundamental models, LENR/transmutation as hypotheses, reproducible experiments, science→IP→industry.
-
----
-
-## 20. IP and commercialization strategy
-
-Every material R&D result should have:
-
-- provenance/authorship;
-- prior-art review;
-- reproducibility evidence;
-- TRL;
-- patentability assessment;
-- licensing/spin-out/manufacturing path;
-- target jurisdiction/market strategy.
-
-Patent filing itself is not evidence of scientific or commercial validity.
+> **СИНЕРГИЯ — крупная federated R&D platform и кандидат на regulatory sandbox, а не завершённая национальная production-инфраструктура.**
 
 ---
 
-## 21. Definition of success
+# 23. Регуляторная песочница
 
-The sandbox succeeds when independent hypotheses pass evidence gates:
+Такой проект нельзя безопасно запускать сразу «на всю экономику».
 
-1. federation survives real failure scenarios;
-2. external profit cannot be recognized without settlement/accounting evidence;
-3. AI stays within authority boundaries;
-4. Personal Capital improves measurable financial behavior;
-5. public-finance traceability reduces audit/control cost or error;
-6. at least one R&D/science line reaches reproducible industrial pilot;
-7. individual modules show commercial demand without requiring the entire federation to sell as one monolith.
+Правильный путь:
 
----
+```text
+RESEARCH
+   ↓
+PROTOTYPE
+   ↓
+LOCAL TEST
+   ↓
+SANDBOX
+   ↓
+SHADOW
+   ↓
+CAPPED CANARY
+   ↓
+LIMITED LIVE
+   ↓
+PRODUCTION
+```
 
-## 22. Evidence vocabulary
+В песочнице можно отдельно проверять:
 
-`CONCEPT → IMPLEMENTED → TESTS_PRESENT → RUNNER_EXECUTED → VERIFIED → SHADOW → LIVE_SETTLED → PRODUCTION_READY`
-
-Status:
-
-`CANONICAL / CANDIDATE / R&D / LEGACY / ARCHIVE / PRESENTATION / PLACEHOLDER`
-
-**Lower status must never be marketed as a higher status.**
-
----
-
-## 23. Due diligence package
-
-- Federation manifest / authority graph;
-- full 45-repo registry;
-- `IP_VALUATION.md`;
-- contracts/schema registry;
-- PR/commit evidence;
-- E2E DAG;
-- failure-injection tests;
-- threat model;
-- regulatory mapping;
-- MIDAS model cards/OOS evidence;
-- HardNAV/reconciliation invariants;
-- public-finance mock/pilot datasets;
-- science falsification protocols;
-- roadmap/budget/milestones;
-- future formal IP register/SBOM/license audit.
-
-### External valuation references
-
-- WIPO — *Valuing Intellectual Property Assets*.
-- WIPO 2025 — *Intellectual Property Valuation Basics for Technology Transfer Professionals*.
-
-These references describe cost, market, income and real-options approaches; they do not certify the values in this README.
+- личные финансы;
+- payment lifecycle;
+- accounting;
+- algorithmic trading;
+- AI governance;
+- public budget evidence;
+- data transport;
+- security;
+- scientific workflow;
+- capital-allocation mechanics;
+- «печатный станок» только как ограниченный falsifiable economic experiment.
 
 ---
 
-## 24. Contact / participation
+# 24. Экономическая идея всей СИНЕРГИИ
 
-**Project:** SYNERGY Regulatory Sandbox  
-**Founder / Systems Architect:** Евгений Коштенко  
-**GitHub:** `Shtenco`  
-**Master repository:** `Shtenco/synergy_project`
+В конечном счёте система должна замыкать один очень большой цикл:
 
-Seeking regulatory, banking, brokerage, GovTech, industrial, academic, security and investment partners for bounded evidence-driven pilots.
+```text
+ЛЮДИ
+ ↓
+НАКОПЛЕНИЯ
+ ↓
+КАПИТАЛ
+ ↓
+БИЗНЕС / ИНВЕСТИЦИИ / НАУКА
+ ↓
+ПРОИЗВОДИТЕЛЬНОСТЬ
+ ↓
+ТОВАРЫ И УСЛУГИ
+ ↓
+ВНЕШНЯЯ ВЫРУЧКА
+ ↓
+ПЛАТЕЖ
+ ↓
+БУХГАЛТЕРСКАЯ ИСТИНА
+ ↓
+РЕИНВЕСТИРОВАНИЕ
+ ↓
+БОЛЬШЕ ПРОИЗВОДИТЕЛЬНОГО КАПИТАЛА
+```
+
+AI ускоряет поиск решений. MIDAS исследует доходность капитала. Science Agent ищет новые технологии. Data Fabric хранит знания. SynergyNet переносит данные. Blockchain доказывает неизменность. MetaPay рассчитывается. Financial OS говорит, что произошло экономически. Productive Economy превращает капитал в реальные активы.
+
+Именно в этом смысл слова **СИНЕРГИЯ**:
+
+> **ценность должна возникать не из одного чудо-модуля, а из правильно соединённых систем, каждая из которых усиливает остальные и при этом остаётся проверяемой.**
 
 ---
 
-## Disclaimer
+# 25. Оценка технологического IP / know-how
 
-This repository describes research and project architecture. It is not a public offer, promise of returns, investment recommendation, banking/brokerage/payment license, independent IP appraisal, audited fair value, or assertion that experimental scientific hypotheses are proven. Any regulated/live functionality must operate only within an authorized legal perimeter and after the relevant evidence gates.
+После полного пересмотра 45 технических репозиториев и отдельного аудита Data Fabric внутренняя management-оценка составляет:
+
+| Показатель | Indicative range |
+|---|---:|
+| Replacement / reproduction portfolio | **$12.4–34.5M** |
+| Current risk-adjusted technology/IP/know-how | **$9.3–26.9M** |
+| Post-sandbox option scenario | **$34.2–97.3M** |
+
+Округлённо для внешнего представления:
+
+> **Текущая внутренняя оценка технологического IP/know-how СИНЕРГИИ: примерно $9–27 млн.**
+
+Это:
+
+- не независимый appraisal;
+- не audited fair value;
+- не цена продажи;
+- не обещание будущей капитализации.
+
+Подробная методология: [`IP_VALUATION.md`](IP_VALUATION.md)
+
+---
+
+# 26. Откуда появилась эта идея
+
+СИНЕРГИЯ не возникла в один день.
+
+Её концептуальные корни уходят в более раннюю модель **«Новая Россия / Единая интеллектуальная система»**, где уже присутствовали:
+
+- личный капитал;
+- сеть людей и бизнеса;
+- фонд развития;
+- инвестиции;
+- наука;
+- промышленность;
+- AI-управление;
+- цифровая валюта;
+- региональное развитие;
+- системная математическая модель.
+
+Современная СИНЕРГИЯ отличается тем, что старается превратить эти большие идеи в **отдельные falsifiable engineering domains с чёткими границами authority**.
+
+То, что раньше существовало как один большой концепт, сегодня разложено на десятки репозиториев, тестов, контрактов, моделей и доказательных контуров.
+
+---
+
+# 27. Куда смотреть дальше
+
+### Полная карта репозиториев
+
+[`REPOSITORIES.md`](REPOSITORIES.md)
+
+### Глубокий аудит всех 46 observed repositories
+
+[`TECHNOLOGY_AUDIT_46.md`](TECHNOLOGY_AUDIT_46.md)
+
+### Оценка IP / know-how
+
+[`IP_VALUATION.md`](IP_VALUATION.md)
+
+### Архитектурный корень Федерации
+
+[`Shtenco/synergy_system`](https://github.com/Shtenco/synergy_system)
+
+---
+
+# 28. Коротко: что мы пытаемся построить
+
+Не ещё один банк.  
+Не ещё одну криптовалюту.  
+Не ещё одного торгового робота.  
+Не ещё один ChatGPT-клон.  
+Не ещё один блокчейн.  
+Не ещё одну бухгалтерскую программу.
+
+**СИНЕРГИЯ — это попытка соединить их функции в одну большую, проверяемую и экономически честную цифровую систему.**
+
+```text
+Человек
++ Личный капитал
++ Бизнес
++ Реальная экономика
++ Инвестиции
++ Платежи
++ Бухгалтерия
++ AI
++ Наука
++ Промышленность
++ Государственный бюджет
++ Data Fabric
++ P2P-сеть
++ Blockchain
++ MetaChain
++ Meta-OS
++ TURBO
++ XPU
+= СИНЕРГИЯ
+```
+
+И главный вопрос проекта звучит не:
+
+> «Можно ли придумать красивую модель?»
+
+а:
+
+> **«Можно ли построить систему, где каждый экономический и технологический результат можно проверить, воспроизвести и связать с реальным источником ценности?»**
+
+Именно это СИНЕРГИЯ пытается доказать — шаг за шагом.
