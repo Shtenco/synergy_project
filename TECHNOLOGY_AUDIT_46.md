@@ -1,4 +1,11 @@
 # СИНЕРГИЯ — Technology Audit 46/46
+> [!IMPORTANT]
+> **ИСТОРИЧЕСКИЙ СНИМОК.** Этот документ фиксирует более раннее состояние Федерации 45/46 на 6 сентября 2026 года и сохраняется для provenance.
+> Текущий канонический реестр содержит **75 репозиториев**:
+> [SYNERGY Repository Atlas](https://github.com/Shtenco/synergy_system/blob/main/docs/SYNERGY_REPOSITORY_ATLAS.md) ·
+> [Registry JSON](https://github.com/Shtenco/synergy_system/blob/main/registry/SYNERGY_REPOSITORIES.json) ·
+> [Federation V2](https://github.com/Shtenco/synergy_system/blob/main/config/repository_federation_v2.yaml).
+
 
 > **Дата:** 6 сентября 2026  
 > **Scope:** default-branch/root/README technology inventory + known active Federation V3 candidate work.  
