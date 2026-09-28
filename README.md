@@ -142,7 +142,7 @@ REBALANCING GRAPH
 Это очень важно. Международный перевод может занимать часы или дни, а opportunity — секунды. Поэтому зрелая модель строится на **prefunded accounts**, а медленные банковские/межсетевые rails используются прежде всего для ребалансировки.
 
 Целевой проект: [`Shtenco/synergy_pay_system`](https://github.com/Shtenco/synergy_pay_system)  
-Исследовательский граф: [`Shtenco/algotrading_graph_system`](https://github.com/Shtenco/algotrading_graph_system)
+Исследовательский граф: [`Shtenco/synergy_algotrading_graph_system`](https://github.com/Shtenco/synergy_algotrading_graph_system)
 
 ---
 
@@ -233,7 +233,7 @@ ExecutionCosts
 Но если программируемая ликвидность помогает поймать **реальный внешний spread, fee, market-making income или другой внешний cash flow**, тогда она становится финансовым усилителем.
 
 Основной R&D: [`Shtenco/print_money_synergychain`](https://github.com/Shtenco/print_money_synergychain)  
-Связанные лаборатории: [`ai_financial_system`](https://github.com/Shtenco/ai_financial_system), [`usds`](https://github.com/Shtenco/usds), [`cashero`](https://github.com/Shtenco/cashero)
+Связанные лаборатории: [`ai_financial_system`](https://github.com/Shtenco/synergy_ai_financial_system), [`usds`](https://github.com/Shtenco/synergy_usds), [`cashero`](https://github.com/Shtenco/synergy_cashero)
 
 ---
 
@@ -317,7 +317,7 @@ Risk engine должен иметь абсолютное veto на:
 
 > **Backtest equity не является деньгами. Внешняя стоимость возникает только после реального settlement и reconciliation.**
 
-Canonical target: [`Shtenco/midas_ai`](https://github.com/Shtenco/midas_ai)
+Canonical target: [`Shtenco/synergy_midas_ai`](https://github.com/Shtenco/synergy_midas_ai)
 
 ---
 
@@ -684,7 +684,7 @@ Business/Growth OS может объединять:
 - procurement demand signals;
 - переход торговых компаний к собственному производству.
 
-Проект: [`Shtenco/synergychain`](https://github.com/Shtenco/synergychain)
+Проект: [`Shtenco/synergy_chain`](https://github.com/Shtenco/synergy_chain)
 
 ---
 
@@ -798,9 +798,9 @@ NEXUS не является автоматически:
 
 Проекты:
 
-- [`Shtenco/agi_nexus`](https://github.com/Shtenco/agi_nexus)
-- [`Shtenco/agi_olga`](https://github.com/Shtenco/agi_olga) — research lineage
-- [`Shtenco/agi_autopilot`](https://github.com/Shtenco/agi_autopilot)
+- [`Shtenco/synergy_agi_nexus`](https://github.com/Shtenco/synergy_agi_nexus)
+- [`Shtenco/synergy_agi_olga`](https://github.com/Shtenco/synergy_agi_olga) — research lineage
+- [`Shtenco/synergy_agi_autopilot`](https://github.com/Shtenco/synergy_agi_autopilot)
 
 ---
 
@@ -832,12 +832,12 @@ EURASIAN PROJECT
 ПРОИЗВОДСТВО
 ```
 
-Проект: [`Shtenco/nexus_science_agent`](https://github.com/Shtenco/nexus_science_agent)
+Проект: [`Shtenco/synergy_nexus_science_agent`](https://github.com/Shtenco/synergy_nexus_science_agent)
 
 Научные R&D-линии:
 
 - [`binary_quantum_theory`](https://github.com/Shtenco/binary_quantum_theory)
-- [`cold_nuclear`](https://github.com/Shtenco/cold_nuclear)
+- [`cold_nuclear`](https://github.com/Shtenco/synergy_cold_nuclear)
 
 Они являются исследовательскими программами, а не признанной экспериментальной физикой.
 
@@ -869,7 +869,7 @@ Merkle / Audit Evidence
 
 Цель — не «заменить государство токеном», а сделать бюджетные цепочки проверяемыми.
 
-Проект: [`Shtenco/blochain_budget`](https://github.com/Shtenco/blochain_budget)
+Проект: [`Shtenco/synergy_blochain_budget`](https://github.com/Shtenco/synergy_blochain_budget)
 
 ---
 
@@ -919,7 +919,7 @@ Codec может измениться. Экономический факт — �
 - MDL routing;
 - exact SHA-256 round trip testing.
 
-Проект: [`Shtenco/ai_compress`](https://github.com/Shtenco/ai_compress)
+Проект: [`Shtenco/synegy_ai_compress`](https://github.com/Shtenco/synegy_ai_compress)
 
 ### qr_compress
 
@@ -938,7 +938,7 @@ Codec может измениться. Экономический факт — �
 QR transport != authorization
 ```
 
-Проект: [`Shtenco/qr_compress`](https://github.com/Shtenco/qr_compress)
+Проект: [`Shtenco/synergy_qr_compress`](https://github.com/Shtenco/synergy_qr_compress)
 
 ---
 
@@ -970,7 +970,7 @@ Integrity Verification
 
 SynergyNet не имеет права интерпретировать PnL или бухгалтерию.
 
-Проект: [`Shtenco/synergynet`](https://github.com/Shtenco/synergynet)
+Проект: [`Shtenco/synergy_net`](https://github.com/Shtenco/synergy_net)
 
 ---
 
@@ -1051,7 +1051,7 @@ Architecture root: [`Shtenco/synergy_system`](https://github.com/Shtenco/synergy
 
 R&D host/kernel/virtualization substrate.
 
-Проект: [`Shtenco/turbo_linux`](https://github.com/Shtenco/turbo_linux)
+Проект: [`Shtenco/synergy_turbo_linux`](https://github.com/Shtenco/synergy_turbo_linux)
 
 ### XPU
 
@@ -1073,7 +1073,7 @@ cycle
 
 12 288 lanes, compile-time placement, global wavefront, radix switching и persistent content-addressed state — исследовательские цели, не доказанный silicon product.
 
-Проект: [`Shtenco/motherboard_xpu_xml`](https://github.com/Shtenco/motherboard_xpu_xml)
+Проект: [`Shtenco/synergy_motherboard_xpu_xml`](https://github.com/Shtenco/synergy_motherboard_xpu_xml)
 
 ---
 
@@ -1192,42 +1192,42 @@ Evidence
 | 6 | [`global_liquidity_dataminer`](https://github.com/Shtenco/global_liquidity_dataminer) | macro/liquidity data |
 | 7 | [`3D_bars_market_structure`](https://github.com/Shtenco/3D_bars_market_structure) | 3D market representation |
 | 8 | [`multi_threaded_trading_robot_with_machine_learning_python`](https://github.com/Shtenco/multi_threaded_trading_robot_with_machine_learning_python) | parallel ML trading lineage |
-| 9 | [`midas_ai_trading_system`](https://github.com/Shtenco/midas_ai_trading_system) | large MIDAS R&D lineage |
+| 9 | [`midas_ai_trading_system`](https://github.com/Shtenco/synergy_midas_ai_trading_system) | large MIDAS R&D lineage |
 | 10 | [`midas_lite`](https://github.com/Shtenco/midas_lite) | compact MIDAS lineage |
-| 11 | [`turbo_linux`](https://github.com/Shtenco/turbo_linux) | host/kernel R&D |
-| 12 | [`agi_olga`](https://github.com/Shtenco/agi_olga) | NEXUS reasoning lineage |
-| 13 | [`ai_coder`](https://github.com/Shtenco/ai_coder) | evidence-backed code engineering |
-| 14 | [`ai_trade_terminal`](https://github.com/Shtenco/ai_trade_terminal) | terminal/DataHub/supervisor lineage |
+| 11 | [`turbo_linux`](https://github.com/Shtenco/synergy_turbo_linux) | host/kernel R&D |
+| 12 | [`agi_olga`](https://github.com/Shtenco/synergy_agi_olga) | NEXUS reasoning lineage |
+| 13 | [`ai_coder`](https://github.com/Shtenco/synergy_ai_coder) | evidence-backed code engineering |
+| 14 | [`ai_trade_terminal`](https://github.com/Shtenco/synergy_ai_trade_terminal) | terminal/DataHub/supervisor lineage |
 | 15 | [`shtencoauantai.github.io`](https://github.com/Shtenco/shtencoauantai.github.io) | public showcase |
-| 16 | [`cashero`](https://github.com/Shtenco/cashero) | token/liquidity R&D |
-| 17 | [`ai_language`](https://github.com/Shtenco/ai_language) | semantic engineering / traceability |
-| 18 | [`sinergy-super-app`](https://github.com/Shtenco/sinergy-super-app) | super-app lineage |
+| 16 | [`cashero`](https://github.com/Shtenco/synergy_cashero) | token/liquidity R&D |
+| 17 | [`ai_language`](https://github.com/Shtenco/synergy_ai_language) | semantic engineering / traceability |
+| 18 | [`sinergy-super-app`](https://github.com/Shtenco/sinergy_super_app) | super-app lineage |
 | 19 | [`binary_quantum_theory`](https://github.com/Shtenco/binary_quantum_theory) | scientific R&D |
-| 20 | [`ai_financial_system`](https://github.com/Shtenco/ai_financial_system) | AMM/QE/QT/MEV R&D |
-| 21 | [`algotrading_graph_system`](https://github.com/Shtenco/algotrading_graph_system) | global capacitated market graph |
-| 22 | [`ai_compress`](https://github.com/Shtenco/ai_compress) | canonical Data Fabric target |
+| 20 | [`ai_financial_system`](https://github.com/Shtenco/synergy_ai_financial_system) | AMM/QE/QT/MEV R&D |
+| 21 | [`algotrading_graph_system`](https://github.com/Shtenco/synergy_algotrading_graph_system) | global capacitated market graph |
+| 22 | [`ai_compress`](https://github.com/Shtenco/synegy_ai_compress) | canonical Data Fabric target |
 | 23 | [`synergy_pay_system`](https://github.com/Shtenco/synergy_pay_system) | MetaPay / arbitrage / settlement |
 | 24 | [`synergy_ai_blockchain`](https://github.com/Shtenco/synergy_ai_blockchain) | PQ commitments |
-| 25 | [`synergychain`](https://github.com/Shtenco/synergychain) | Business/Growth OS |
-| 26 | [`synergychain.github.io`](https://github.com/Shtenco/synergychain.github.io) | public portal |
-| 27 | [`cold_nuclear`](https://github.com/Shtenco/cold_nuclear) | LENR/materials R&D |
-| 28 | [`usds`](https://github.com/Shtenco/usds) | stable-money/reserve R&D |
+| 25 | [`synergychain`](https://github.com/Shtenco/synergy_chain) | Business/Growth OS |
+| 26 | [`synergychain.github.io`](https://github.com/Shtenco/synergy_chain.github.io) | public portal |
+| 27 | [`cold_nuclear`](https://github.com/Shtenco/synergy_cold_nuclear) | LENR/materials R&D |
+| 28 | [`usds`](https://github.com/Shtenco/synergy_usds) | stable-money/reserve R&D |
 | 29 | [`synergy_financial_os`](https://github.com/Shtenco/synergy_financial_os) | accounting truth / HardNAV |
 | 30 | [`synergy_eurasian`](https://github.com/Shtenco/synergy_eurasian) | productive economy |
 | 31 | [`synergy_matrix_sota`](https://github.com/Shtenco/synergy_matrix_sota) | household capital model |
-| 32 | [`agi_nexus`](https://github.com/Shtenco/agi_nexus) | bounded reasoning |
-| 33 | [`midas_ai`](https://github.com/Shtenco/midas_ai) | institutional trading intelligence |
+| 32 | [`agi_nexus`](https://github.com/Shtenco/synergy_agi_nexus) | bounded reasoning |
+| 33 | [`midas_ai`](https://github.com/Shtenco/synergy_midas_ai) | institutional trading intelligence |
 | 34 | [`synergy_system`](https://github.com/Shtenco/synergy_system) | federation constitution/contracts |
-| 35 | [`nexus_science_agent`](https://github.com/Shtenco/nexus_science_agent) | science/falsification/commercialization |
-| 36 | [`synergynet`](https://github.com/Shtenco/synergynet) | P2P data/evidence transport |
+| 35 | [`nexus_science_agent`](https://github.com/Shtenco/synergy_nexus_science_agent) | science/falsification/commercialization |
+| 36 | [`synergynet`](https://github.com/Shtenco/synergy_net) | P2P data/evidence transport |
 | 37 | [`synergy_meta_os`](https://github.com/Shtenco/synergy_meta_os) | runtime orchestration |
-| 38 | [`blochain_budget`](https://github.com/Shtenco/blochain_budget) | budget/procurement evidence |
-| 39 | [`agi_autopilot`](https://github.com/Shtenco/agi_autopilot) | bounded action orchestration |
+| 38 | [`blochain_budget`](https://github.com/Shtenco/synergy_blochain_budget) | budget/procurement evidence |
+| 39 | [`agi_autopilot`](https://github.com/Shtenco/synergy_agi_autopilot) | bounded action orchestration |
 | 40 | [`sinergy_app`](https://github.com/Shtenco/sinergy_app) | legacy app placeholder |
 | 41 | [`synergy_app`](https://github.com/Shtenco/synergy_app) | Personal Capital product |
-| 42 | [`qr_compress`](https://github.com/Shtenco/qr_compress) | offline Data Fabric |
+| 42 | [`qr_compress`](https://github.com/Shtenco/synergy_qr_compress) | offline Data Fabric |
 | 43 | [`synergy_metachain`](https://github.com/Shtenco/synergy_metachain) | cross-chain trust |
-| 44 | [`motherboard_xpu_xml`](https://github.com/Shtenco/motherboard_xpu_xml) | XPU compute R&D |
+| 44 | [`motherboard_xpu_xml`](https://github.com/Shtenco/synergy_motherboard_xpu_xml) | XPU compute R&D |
 | 45 | [`print_money_synergychain`](https://github.com/Shtenco/print_money_synergychain) | Print Machine falsification R&D |
 
 Подробно: [REPOSITORIES.md](REPOSITORIES.md)  
