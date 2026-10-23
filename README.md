@@ -66,7 +66,7 @@ MetaPay — не просто платёжный шлюз. В текущей а�
 Он может моделировать и исследовать:
 
 - банки и платёжные коридоры;
-- fiat ↔ crypto ↔ CBDC;
+- fiat  crypto  CBDC;
 - CEX;
 - DEX/AMM;
 - DEX aggregators;
@@ -1544,17 +1544,17 @@ Verified Delta
 <!-- SYNERGY-FEDERATION-PASSPORT:START -->
 ---
 
-## 🧭 SYNERGY federation passport
+##  SYNERGY federation passport
 
-**Домен:** 📘 Economic master dossier  
+**Домен:**  Economic master dossier  
 **Архитектурный родитель:** [`synergy_system`](https://github.com/Shtenco/synergy_system)  
 **Архитектурный корень:** [`synergy_system`](https://github.com/Shtenco/synergy_system)
 
 ```mermaid
 flowchart LR
-    SYS[🧭 synergy_system] --> P[synergy_system]
+    SYS[ synergy_system] --> P[synergy_system]
     P --> THIS[synergy_project]
-    THIS --> E[📦 Evidence / outputs]
+    THIS --> E[ Evidence / outputs]
 ```
 
 ### Документационный контракт
@@ -1563,9 +1563,9 @@ README должен показывать: проблему → архитект�
 
 ### Навигация
 
-- [📚 Атлас всех 75 репозиториев](https://github.com/Shtenco/synergy_system/blob/main/docs/SYNERGY_REPOSITORY_ATLAS.md)
-- [🧾 Машиночитаемый registry](https://github.com/Shtenco/synergy_system/blob/main/registry/SYNERGY_REPOSITORIES.json)
-- [🧭 SYNERGY SYSTEM](https://github.com/Shtenco/synergy_system)
+- [ Атлас всех 75 репозиториев](https://github.com/Shtenco/synergy_system/blob/main/docs/SYNERGY_REPOSITORY_ATLAS.md)
+- [ Машиночитаемый registry](https://github.com/Shtenco/synergy_system/blob/main/registry/SYNERGY_REPOSITORIES.json)
+- [ SYNERGY SYSTEM](https://github.com/Shtenco/synergy_system)
 
 ### Authority rule
 
