@@ -1,3 +1,9 @@
+<!-- SCIENTIFIC-V3-2026:START -->
+<img src="assets/readme/scientific-architecture-v3.svg" width="100%" alt="SYNERGY / CAPITAL TO SCIENCE"/>
+
+[Научно-техническое досье V3 — алгоритмы, формулы и воспроизводимость](docs/SCIENTIFIC_DOSSIER_V3_2026.md). Предыдущий README полностью сохранён.
+<!-- SCIENTIFIC-V3-2026:END -->
+
 # СИНЕРГИЯ
 
 ## Федеративная экономическая операционная система: личный капитал → внешняя прибыль → наука → промышленность → новый внешний доход
